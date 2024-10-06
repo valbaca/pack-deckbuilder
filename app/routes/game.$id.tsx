@@ -30,7 +30,7 @@ export default function Game() {
   return (
     <div className="p-4">
       <pre className="text-lg font-bold">{`Game id ${data.gameState.id}`}</pre>
-      <Power power={data.gameState.power} />
+      <Bones bones={data.gameState.bones} />
       <Hand hand={data.gameState.hand} />
 
       <Active active={data.gameState.active} />
@@ -40,8 +40,10 @@ export default function Game() {
   );
 }
 
-function Power(prop: { power: number }) {
-  return <div className="text-xl text-yellow-600">Power: {prop.power}</div>;
+function Bones(prop: { bones: number }) {
+  return (
+    <div className="text-xl text-yellow-600">Total Bones: {prop.bones}</div>
+  );
 }
 
 function Hand(prop: { hand: Card[] }) {

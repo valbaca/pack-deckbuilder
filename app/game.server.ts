@@ -37,7 +37,7 @@ export function enact(gid: string, a: Action) {
 
 export interface GameState {
   id: string;
-  power: number;
+  bones: number;
   draft: Cards;
   hand: Cards;
   active: Cards;
@@ -54,7 +54,7 @@ export function getGameState(gid: string): GameState {
 }
 
 export function toGameStateView(gs: GameState): GameStateView {
-  return pick(gs, "id", "power", "draft", "hand", "active", "discard");
+  return pick(gs, "id", "bones", "draft", "hand", "active", "discard");
 }
 
 function pick<T, K extends keyof T>(obj: T, ...keys: K[]): Pick<T, K> {
@@ -77,12 +77,12 @@ function preEffect(gs: GameState, a: Action): GameState {
 const cards: Cards = [
   {
     name: "Bark",
-    text: "+1 Power",
-    flavor: "BARK! --every dog ever all the time",
+    text: "+1 bones",
+    flavor: "BARK! --every dog, ever, all the time",
   },
   {
     name: "Nap",
-    text: "+0 Power",
+    text: "+0 bones",
     flavor: "It's best to let sleeping dogs lie",
   },
 ];
@@ -95,7 +95,7 @@ type Effect = (gs: GameState) => GameState;
 const inc: (n: number) => Effect = (n) => (gs) => {
   return {
     ...gs,
-    power: Math.max(0, gs.power + n),
+    bones: Math.max(0, gs.bones + n),
   };
 };
 
@@ -106,7 +106,7 @@ const effects: Record<string, Effect> = {
 
 const initGameState: GameState = {
   id: "",
-  power: 0,
+  bones: 0,
   draft: [] as Cards,
   hand: [Bark, Bark, Bark, Nap, Nap] as Cards,
   active: [] as Cards,
