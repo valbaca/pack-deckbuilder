@@ -1,5 +1,5 @@
 {
-  "name": "pack-deckbuilder",
+  "name": "pack-deckbuilder-136c",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -8,7 +8,6 @@
     "dev": "remix dev -c \"npm run dev:serve\"",
     "dev:serve": "NODE_OPTIONS=\"--import ./mocks/index.js\" remix-serve ./build/index.js",
     "format": "prettier --write .",
-    "format:repo": "npm run format && npm run lint -- --fix",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "setup": "prisma generate && prisma migrate deploy && prisma db seed",
     "start": "remix-serve ./build/index.js",
