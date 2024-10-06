@@ -129,6 +129,9 @@ jobs:
       - name: ⚙️ Build
         run: pnpm build
 
+      - name: 🪴 Install cypress
+        run: pnpm dlx cypress install
+
       - name: 🌳 Cypress run
         uses: cypress-io/github-action@v6
         with:
