@@ -1,9 +1,10 @@
+import { produce } from "immer";
 import invariant from "tiny-invariant";
 import { Action, Cards, GameArea, GameStateView } from "./game.util";
-import { produce } from "immer";
 
 export function generateNewGameId(): string {
   // TODO hook into DB
+  globalGameState = initGameState;
   return crypto.randomUUID();
 }
 

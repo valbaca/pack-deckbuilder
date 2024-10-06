@@ -14,7 +14,6 @@ Considered:
   - should be able to use indexes
 - version, may need these later for foil / promo cards
 
-
 ### Deps
 
-- immer: trying it out, as I'd like to use it more. Also fits more with how I think about things. 
+- immer: trying it out, as I'd like to use it more. Also fits more with how I think about things.
