@@ -28,40 +28,39 @@ export default function Game() {
   const data = useLoaderData<typeof loader>();
 
   return (
-    <div>
-      <pre>{`Game id ${data.gameState.id}`}</pre>
+    <div className="p-4">
+      <pre className="text-lg font-bold">{`Game id ${data.gameState.id}`}</pre>
       <Power power={data.gameState.power} />
-      <h2>Your Hand:</h2>
       <Hand hand={data.gameState.hand} />
 
-      <h2>Your Active cards:</h2>
       <Active active={data.gameState.active} />
 
-      <h2>Your Discard:</h2>
       <Discard discard={data.gameState.discard} />
     </div>
   );
 }
 
 function Power(prop: { power: number }) {
-  return <div>Power: {prop.power}</div>;
+  return <div className="text-xl text-yellow-600">Power: {prop.power}</div>;
 }
 
 function Hand(prop: { hand: Card[] }) {
   return (
-    <div>
-      {prop.hand.map((card, idx) => (
-        <HandCard card={card} key={idx} index={idx} />
-      ))}
-    </div>
+    <>
+      <h2 className="mt-4 text-xl font-bold">Your Hand:</h2>
+      <div className="space-y-2">
+        {prop.hand.map((card, idx) => (
+          <HandCard card={card} key={idx} index={idx} />
+        ))}
+      </div>
+    </>
   );
 }
 
 function HandCard(prop: { card: Card; index: number }) {
   return (
-    <div>
-      🃏 Card: {prop.card.name}
-      <Form method="post">
+    <div className="rounded border p-2 shadow">
+      <Form method="post" className="space-y-2">
         <input
           type="text"
           name="cardName"
@@ -69,9 +68,10 @@ function HandCard(prop: { card: Card; index: number }) {
           required
           value={prop.card.name}
           readOnly
+          className="rounded border p-1 text-lg font-bold"
         />
-        <div>{prop.card.text}</div>
-        <div className="italic">{prop.card.flavor}</div>
+        <div className="rounded border p-1">{prop.card.text}</div>
+        <div className="font-extralight italic">{prop.card.flavor}</div>
         <input
           type="number"
           name="index"
@@ -80,7 +80,12 @@ function HandCard(prop: { card: Card; index: number }) {
           hidden
           value={prop.index}
         />
-        <button type="submit">Play!</button>
+        <button
+          type="submit"
+          className="rounded bg-blue-500 p-1 text-white hover:bg-blue-600"
+        >
+          Play!
+        </button>
       </Form>
     </div>
   );
@@ -88,20 +93,26 @@ function HandCard(prop: { card: Card; index: number }) {
 
 function Active(prop: { active: Cards }) {
   return (
-    <div>
-      {prop.active.map((active, i) => (
-        <div key={i}>{active.name}</div>
-      ))}
-    </div>
+    <>
+      <h2 className="mt-4 text-xl font-bold">Your Active cards:</h2>
+      <div>
+        {prop.active.map((active, i) => (
+          <div key={i}>{active.name}</div>
+        ))}
+      </div>
+    </>
   );
 }
 
 function Discard(prop: { discard: Cards }) {
   return (
-    <div>
-      {prop.discard.map((disc, i) => (
-        <div key={i}>{disc.name}</div>
-      ))}
-    </div>
+    <>
+      <h2 className="mt-4 text-xl font-bold">Your Discard:</h2>
+      <div>
+        {prop.discard.map((disc, i) => (
+          <div key={i}>{disc.name}</div>
+        ))}
+      </div>
+    </>
   );
 }
