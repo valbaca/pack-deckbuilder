@@ -119,11 +119,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install dependencies via cypress
-        uses: cypress-io/github-action@v6
-        with:
-          runTests: false
-
       - name: Generate prisma
         run: pnpm prisma generate
 
