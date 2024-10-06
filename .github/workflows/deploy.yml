@@ -115,8 +115,10 @@ jobs:
           cache: pnpm
           node-version: 20
 
-      - name: 📥 Install deps
-        run: pnpm install
+      - name: Install dependencies
+        uses: cypress-io/github-action@v6
+        with:
+          runTests: false
 
       - name: Generate prisma
         run: pnpm prisma generate
@@ -130,6 +132,7 @@ jobs:
       - name: 🌳 Cypress run
         uses: cypress-io/github-action@v6
         with:
+          install: false
           start: pnpm start:mocks
           wait-on: http://localhost:8811
         env:
