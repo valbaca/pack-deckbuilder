@@ -1,5 +1,6 @@
 import { useMatches } from "@remix-run/react";
 import { useMemo } from "react";
+import invariant from "tiny-invariant";
 
 import type { User } from "~/models/user.server";
 
@@ -74,3 +75,15 @@ export function useUser(): User {
 export function validateEmail(email: unknown): email is string {
   return typeof email === "string" && email.length > 3 && email.includes("@");
 }
+
+export const validateString = (s: FormDataEntryValue | null): string => {
+  invariant(typeof s === "string");
+  return s;
+};
+
+export const validateNumber = (n: FormDataEntryValue | null): number => {
+  invariant(typeof n === "string");
+  const parsedN = Number(n);
+  invariant(!isNaN(parsedN));
+  return parsedN;
+};
