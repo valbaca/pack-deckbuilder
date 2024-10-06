@@ -37,7 +37,7 @@ Click this button to create a [Gitpod](https://gitpod.io) workspace with the pro
 - Initial setup:
 
   ```sh
-  npm run setup
+  npm run migrate
   ```
 
 - Start dev server:
