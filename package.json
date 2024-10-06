@@ -87,6 +87,6 @@
     "node": ">=18.0.0"
   },
   "prisma": {
-    "seed": "tsx prisma/seed.ts"
+    "seed": "pnpm dlx tsx prisma/seed.ts"
   }
 }
