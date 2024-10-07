@@ -82,7 +82,6 @@ module.exports = {
           {
             alphabetize: { caseInsensitive: true, order: "asc" },
             groups: ["builtin", "external", "internal", "parent", "sibling"],
-            "newlines-between": "always",
           },
         ],
       },
