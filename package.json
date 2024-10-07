@@ -89,5 +89,10 @@
   },
   "prisma": {
     "seed": "pnpm dlx tsx prisma/seed.ts"
+  },
+  "pnpm": {
+    "overrides": {
+      "cookie@<0.7.0": ">=0.7.0"
+    }
   }
 }
