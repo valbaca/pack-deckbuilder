@@ -1,6 +1,7 @@
 import { produce } from "immer";
 import invariant from "tiny-invariant";
 import { Action, Cards, GameArea, GameStateView } from "./game.util";
+import { redirect } from "@remix-run/node";
 
 export function generateNewGameId(): string {
   // TODO hook into DB
@@ -34,6 +35,9 @@ export function enact(gid: string, a: Action) {
   const newGameState = effects[a.name](gameState);
   console.dir({ newGameState });
   globalGameState = newGameState;
+  if (newGameState.bones === 3 && newGameState.hand.length === 0) {
+    throw redirect("/victory");
+  }
 }
 
 export interface GameState {
