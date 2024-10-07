@@ -80,6 +80,7 @@ function HandCard(prop: { card: Card; index: number }) {
           id="index"
           required
           hidden
+          readOnly
           value={prop.index}
         />
         <button
