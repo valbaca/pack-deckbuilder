@@ -86,7 +86,7 @@ importers:
         version: 4.3.2(vite@5.4.8(@types/node@20.16.10))
       '@vitest/coverage-v8':
         specifier: ^2.1.2
-        version: 2.1.2(vitest@2.1.2(@types/node@20.16.10)(happy-dom@15.7.4)(msw@2.4.9(typescript@5.6.2)))
+        version: 2.1.2(vitest@2.1.2(@types/node@20.16.10)(happy-dom@15.10.1)(msw@2.4.9(typescript@5.6.2)))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
@@ -136,8 +136,8 @@ importers:
         specifier: ^6.3.0
         version: 6.3.0(eslint@8.57.1)(typescript@5.6.2)
       happy-dom:
-        specifier: ^15.7.4
-        version: 15.7.4
+        specifier: ^15.10.1
+        version: 15.10.1
       msw:
         specifier: ^2.4.9
         version: 2.4.9(typescript@5.6.2)
@@ -176,7 +176,7 @@ importers:
         version: 5.0.1(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.10))
       vitest:
         specifier: ^2.1.2
-        version: 2.1.2(@types/node@20.16.10)(happy-dom@15.7.4)(msw@2.4.9(typescript@5.6.2))
+        version: 2.1.2(@types/node@20.16.10)(happy-dom@15.10.1)(msw@2.4.9(typescript@5.6.2))
 
 packages:
 
@@ -2628,8 +2628,8 @@ packages:
     resolution: {integrity: sha512-4haO1M4mLO91PW57BMsDFf75UmwoRX0GkdD+Faw+Lr+r/OZrOCS0pIBwOL1xCKQqnQzbNFGgK2V2CpBUPeFNTw==}
     hasBin: true
 
-  happy-dom@15.7.4:
-    resolution: {integrity: sha512-r1vadDYGMtsHAAsqhDuk4IpPvr6N8MGKy5ntBo7tSdim+pWDxus2PNqOcOt8LuDZ4t3KJHE+gCuzupcx/GKnyQ==}
+  happy-dom@15.10.1:
+    resolution: {integrity: sha512-FuGnj/qIB4QnBL6fWmD7Wnh6STxevLgOVWB6+nopDGgWG1+t9CXkNB2ldZ+iqwD2UKxD2D0SU8el8A6AX6Q1+g==}
     engines: {node: '>=18.0.0'}
 
   has-bigints@1.0.2:
@@ -6180,7 +6180,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@2.1.2(vitest@2.1.2(@types/node@20.16.10)(happy-dom@15.7.4)(msw@2.4.9(typescript@5.6.2)))':
+  '@vitest/coverage-v8@2.1.2(vitest@2.1.2(@types/node@20.16.10)(happy-dom@15.10.1)(msw@2.4.9(typescript@5.6.2)))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -6194,7 +6194,7 @@ snapshots:
       std-env: 3.7.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.2(@types/node@20.16.10)(happy-dom@15.7.4)(msw@2.4.9(typescript@5.6.2))
+      vitest: 2.1.2(@types/node@20.16.10)(happy-dom@15.10.1)(msw@2.4.9(typescript@5.6.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -7171,7 +7171,7 @@ snapshots:
       debug: 4.3.7(supports-color@8.1.1)
       enhanced-resolve: 5.17.1
       eslint: 8.57.1
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-plugin-import@2.31.0)(eslint@8.57.1))(eslint@8.57.1)
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
@@ -7184,7 +7184,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-plugin-import@2.31.0)(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       debug: 3.2.7(supports-color@8.1.1)
     optionalDependencies:
@@ -7211,7 +7211,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint-plugin-import@2.31.0)(eslint@8.57.1))(eslint@8.57.1)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -7765,7 +7765,7 @@ snapshots:
       pumpify: 1.5.1
       through2: 2.0.5
 
-  happy-dom@15.7.4:
+  happy-dom@15.10.1:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
@@ -10194,7 +10194,7 @@ snapshots:
       '@types/node': 20.16.10
       fsevents: 2.3.3
 
-  vitest@2.1.2(@types/node@20.16.10)(happy-dom@15.7.4)(msw@2.4.9(typescript@5.6.2)):
+  vitest@2.1.2(@types/node@20.16.10)(happy-dom@15.10.1)(msw@2.4.9(typescript@5.6.2)):
     dependencies:
       '@vitest/expect': 2.1.2
       '@vitest/mocker': 2.1.2(@vitest/spy@2.1.2)(msw@2.4.9(typescript@5.6.2))(vite@5.4.8(@types/node@20.16.10))
@@ -10217,7 +10217,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.16.10
-      happy-dom: 15.7.4
+      happy-dom: 15.10.1
     transitivePeerDependencies:
       - less
       - lightningcss
